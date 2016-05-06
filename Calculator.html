@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <link href="css/计算器.css" rel="stylesheet">
+</head>
+<body>
+    <!--header部分-->
+    <div id="header">
+        <p>网页版计算器</p>
+    </div>
+
+    <!--contant部分-->
+    <div id="contant">
+        <!--计算器主体-->
+        <div id="main">
+            <table>
+                <tbody class="tBody">
+                    <tr class="t1">
+                        <td>
+                            <input id="outPut" type="text">
+                        </td>
+                    </tr>
+                    <tr style="height: 30px"></tr>
+                    <tr class="t2_1">
+                        <td>
+                            <table>
+                                <tr class="upperTr">
+                                    <td class="uLeft">
+                                        <input name="numSys" type="radio" />
+                                        "十六进制"
+                                        <input name="numSys" type="radio" checked="checked" />
+                                        "十进制"
+                                        <input name="numSys" type="radio" />
+                                        "八进制"
+                                        <input name="numSys" type="radio" />
+                                        "二进制"
+                                    </td>
+                                    <!--<td class="ucenter"></td>-->
+                                    <td class="uRight">
+                                        <input name="zhiDu" type="radio">
+                                        "角度制"
+                                        <input name="zhiDu" type="radio">
+                                        "弧度制"
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="height: 10px"></tr>
+                    <tr class="t2">
+                        <td>
+                            <table>
+                                <tbody>
+                                    <tr class="downTr">
+                                        <td class="dLeft">
+                                            <input name="shift" type="checkbox" />
+                                            "上档功能"
+                                            <input name="hypf" type="checkbox" />
+                                            "双曲函数"
+                                        </td>
+                                        <td class="dCenter">
+                                            <input />
+                                            <input />
+                                            <input />
+                                        </td>
+                                        <td class="dRight">
+                                            <input value="退格" type="button" onclick="backSpace()" />
+                                            <input value="清屏" type="button" onclick="out_clear()"/>
+                                            <input value="全清" type="button" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="height: 30px"></tr>
+                    <tr class="t3">
+                        <td>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="firBox">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input value="Pi" type="button" onclick="PI_input()" /></td>
+                                                        <td><input value="e" type="button" onclick="e_input()" /></td>
+                                                        <td><input value="d.ms" type="button" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input value="(" type="button" onclick="str_click(this)" /></td>
+                                                        <td><input value=")" type="button" onclick="str_click(this)" /></td>
+                                                        <td><input value="In" type="button" onclick="ln_Cal()" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input value="sin" type="button" onclick="sin_Cal()" /></td>
+                                                        <td><input value="x^y" type="button" /></td>
+                                                        <td><input value="log" type="button" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input value="cos" type="button" onclick="cos_Cal()" /></td>
+                                                        <td><input value="x^3" type="button" onclick="x_3_Cal()" /></td>
+                                                        <td><input value="n!" type="button" onclick="factorial_Cal()" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input value="tan" type="button" onclick="tan_Cal()" /></td>
+                                                        <td><input value="x^2" type="button" onclick="x_2_Cal()" /></td>
+                                                        <td><input value="1/x" type="button" onclick="countdown()" /></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td style="width: 30px"></td>
+                                        <td class="secBox">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input value="储存" type="button" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input value="取存" type="button" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input value="累存" type="button" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input value="积存" type="button" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input value="清存" type="button" /></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td style="width: 30px"></td>
+                                        <td class="thiBox">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="num"><input value="7" id="num7" type="button" onclick="str_click(this)" /></td>
+                                                        <td class="num"><input value="8" id="num8" type="button" onclick="str_click(this)" /></td>
+                                                        <td class="num"><input value="9" id="num9" type="button" onclick="str_click(this)" /></td>
+                                                        <td><input value="/" type="button" onclick="str_click(this)" /></td>
+                                                        <td><input value="取余" type="button" onclick="mod_Cal()" /></td>
+                                                        <td><input value="与" type="button" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="num"><input value="4" id="num4" type="button" onclick="str_click(this)" /></td>
+                                                        <td class="num"><input value="5" id="num5" type="button" onclick="str_click(this)" /></td>
+                                                        <td class="num"><input value="6" id="num6" type="button" onclick="str_click(this)" /></td>
+                                                        <td><input value="*" type="button" onclick="str_click(this)" /></td>
+                                                        <td><input value="取整" type="button" onclick="int_Trans()" /></td>
+                                                        <td><input value="或" type="button" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="num"><input value="1" id="num1"type="button" onclick="str_click(this)" /></td>
+                                                        <td class="num"><input value="2" id="num2"type="button" onclick="str_click(this)" /></td>
+                                                        <td class="num"><input value="3" id="num3" type="button" onclick="str_click(this)" /></td>
+                                                        <td><input value="-" type="button" onclick="str_click(this)" /></td>
+                                                        <td><input value="左移" type="button" /></td>
+                                                        <td><input value="非" type="button" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="num"><input value="0" id="num0" type="button" onclick="str_click(this)" /></td>
+                                                        <td><input value="+/-" type="button" /></td>
+                                                        <td><input value="." type="button" onclick="str_click(this)" /></td>
+                                                        <td><input value="+" type="button" onclick="str_click(this)" /></td>
+                                                        <td><input value="=" id="equal_btn" type="button" onclick="ev()" /></td>
+                                                        <td><input value="异或" type="button" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input value="A" type="button" /></td>
+                                                        <td><input value="B" type="button" /></td>
+                                                        <td><input value="C" type="button" /></td>
+                                                        <td><input value="D" type="button" /></td>
+                                                        <td><input value="E" type="button" /></td>
+                                                        <td><input value="F" type="button" /></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                        <tr class="funExe">
+                            <td>
+                                <div>方程计算：</div>
+                                <input class="fun" value="请输入方程" />
+                                <input class="submit" type="button" value="提交" />
+                            </td>
+                        </tr>
+                    <tr class="funDra">
+                        <td>
+                            <div>函数绘图:</div>
+                            <div class="fun_Input">
+                                <p>f(x)=</p>
+                                <input class="Dra" value="请输入函数" />
+                                <input class="DraSub" type="button" value="绘图" />
+                            </div>
+                            <div class="domain">
+                                    <p>请输入定义域：[ <input class="Def_domain" /> , <input class="Def_domain" /> ]</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--历史纪录-->
+        <div id="history">
+            <canvas id="map" width="500" height="290">
+                您的浏览器不支持该元素，请更新浏览器版本或更换浏览器尝试
+            </canvas>
+            <p>历史纪录</p>
+            <!--靠左是运算记录-->
+            <!--靠右是对应的时间-->
+            <div class="recording">
+
+            </div>
+            <div class="recTime">
+
+            </div>
+        </div>
+    </div>
+
+    <!--footer部分-->
+    <div id="footer">
+        <!--当前时间-->
+        <span id="timer"></span>
+    </div>
+
+    <!--<script src="script/test.js"></script>-->
+    <script src="script/时间.js"></script>
+    <script src="script/计算器.js"></script>
+
+</body>
+</html>
