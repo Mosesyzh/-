@@ -1,0 +1,239 @@
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: #333333;
+    color: aliceblue;
+    /*font-size: 62.5%;*/
+}
+#header{
+    background-color: #333;
+    margin-bottom: 60px;
+    color: aliceblue;
+    font-family: "微软雅黑 Light";
+}
+#header p{
+    margin-left: 16px;
+    padding-top: 3.2px;
+    font-size: 19.2px;
+}
+
+input[type = "button" ]{
+    background-color: gainsboro;
+    border: none;
+    width: 70px;
+    height: 20px;
+    vertical-align: bottom;
+    font-weight: bold;
+}
+
+/*计算器主体*/
+#contant{
+    position: relative;;
+}
+#contant>div{
+    display: inline;
+    float: left;
+    margin-top: 60px;
+}
+#main {
+    margin-left: 200px;
+    padding-top: 30px;
+    /*border: 1px solid dimgray;*/
+}
+#main table{
+    margin: 0px auto;
+}
+#main .tBody input[type = "button"]:hover{
+    cursor: pointer;
+}
+#main .tBody .t1 {
+    text-align: center;
+    height: 48px;
+    /*border-bottom: 1px solid aliceblue;*/
+    /*margin-bottom: 5px;*/
+}
+#main .tBody .t1 input {
+    width: 875px;
+    /*line-height: 3em;*/
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid aliceblue;
+    background-color: #333333;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 35px;
+    color: aliceblue;
+    text-align: right;
+    vertical-align: bottom;
+    outline: none;
+    padding: 1.25px 3.125px;
+}
+#main .tBody .t1 input:focus{
+    border-bottom: 1px solid aliceblue;
+    outline: none;
+}
+
+#main .tBody td{
+    display: table-cell;
+}
+#main .tBody .t2_1 .uLeft{
+    width: 414px;
+}
+#main .tBody .t2_1 .uRight{
+    width: 414px;
+    text-align: right;
+}
+#main .tBody .t2 table{
+    width: 828px;
+}
+#main .tBody .t2 .dLeft{
+    width: 270px;
+}
+#main .tBody .t2 .dCenter input{
+    width: 75px;
+    height: 20px;
+    border: none;
+    background-color: aliceblue;
+}
+#main .tBody .t2 .dCenter{
+    width: 300px;
+}
+#main .tBody .t2 .dRight{
+    width: 250px;
+    text-align: right;
+}
+
+#main .tBody .t3 table{
+    /*width: 920px;*/
+}
+#main .tBody .funExe{
+    text-align: center;
+    vertical-align: bottom;
+}
+#main .tBody .funExe div{
+    margin-top: 30px;
+    margin-left: 30px;
+    text-align: left;
+    font-size: 20px;
+    font-family: "微软雅黑 Light";
+}
+#main .tBody .funExe .fun{
+    width: 740px;
+    height: 30px;
+    border: none;
+    font-size: 15px;
+    padding: 1.25px 3.125px;
+    text-align: right;
+    margin-left: 32px;
+    float: left;
+}
+#main .tBody .funExe .submit{
+    height: 32.5px;
+    margin-left: 1px;
+    font-size: 15px;
+    float: left;
+}
+#main .tBody .funDra{
+    text-align: center;
+    vertical-align: bottom;
+}
+#main .tBody .funDra div{
+    margin-top: 30px;
+    margin-left: 30px;
+    text-align: left;
+    font-size: 20px;
+    font-family: "微软雅黑 Light";
+}
+#main .tBody .funDra p{
+    margin-left: 30px;
+    text-align: left;
+    font-size: 20px;
+    font-family: "微软雅黑 Light";
+    float: left;
+}
+#main .tBody .funDra .Dra{
+    width: 700px;
+    height: 30px;
+    border: none;
+    font-size: 15px;
+    padding: 1.25px 3.125px;
+    text-align: right;
+    float: left;
+}
+#main .tBody .funDra .DraSub{
+    height: 32.5px;
+    margin-left: 2px;
+    font-size: 15px;
+    float: left;
+}
+#main .tBody .funDra .fun_Input{
+    margin-top: 2px;
+    margin-left: 0px;
+}
+#main .tBody .funDra .domain{
+    margin-left: 0px;
+    margin-top: 2px;
+}
+#main .tBody .funDra .Def_domain{
+    display: inline-block;
+    width: 60px;
+    border:none;
+    padding-top: 2px;
+    text-align: center;
+}
+
+#main .tBody .t3 #equal_btn{
+    background-color: darkcyan;
+    color: aliceblue;
+    font-weight: bolder;
+}
+#main .tBody .t3 .thiBox .num input{
+    background-color: khaki;
+}
+/*历史纪录*/
+#history{
+    margin-left: 60px;
+    /*border: 1px dashed dimgray;*/
+}
+#history #map{
+    margin: 0px 6.4px 0px 6.4px;
+    /*height: 290px;*/
+    /*width: 500px;*/
+    border: 1px solid dimgray;
+}
+#history .recording{
+    margin: 6.4px;
+    float: left;
+    width: 330px;
+    height: 300px;
+    border: 1px solid dimgray;
+}
+#history .recTime{
+    margin: 6.4px;
+    float: left;
+    width: 160px;
+    height: 300px;
+    border: 1px solid dimgray;
+}
+#history p{
+    text-align: center;
+    font-size: 19.2px;
+    font-family: "微软雅黑 Light";
+    margin-top: 16px;
+}
+
+
+#footer{
+    position: absolute;
+    bottom: 0;
+    font-family: "微软雅黑 Light";
+    font-size: 19.2px;
+}
+#footer span{
+    color: dimgray;
+    position: fixed;
+    right: 16px;
+    bottom: 0;
+}
