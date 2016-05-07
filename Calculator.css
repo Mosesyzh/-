@@ -171,6 +171,7 @@ input[type = "button" ]{
 #main .tBody .funDra .fun_Input{
     margin-top: 2px;
     margin-left: 0px;
+    height: 33px;
 }
 #main .tBody .funDra .domain{
     margin-left: 0px;
